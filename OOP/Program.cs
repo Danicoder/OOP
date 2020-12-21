@@ -27,7 +27,7 @@ namespace OOP
             st.SetNia(7);
             st2.SetNia(3);
 
-            st.SetName2("Pepe");
+            st.SetName2(null); //debería devolver -1, como no lo hace, hacer que devuelva dicho valor
             st2.SetName2("Elena");
 
             /*System.Console.WriteLine("El nia de " + st.GetName() + " es " +  st.GetNia());
@@ -39,6 +39,11 @@ namespace OOP
             db.Add(st2);
             //list.Add(null); para forzar un error 
             bool test = db.ContainsStudent("Paco");
+            int test2 = db.GetStudentIndex("Lucia");//devuelve 0
+            int test3 = db.GetStudentIndex("Juan");//devuelve -1
+            int test4 = db.GetStudentIndex("LUCIA");//devuelve 1
+            int test5 = db.GetStudentIndex("Oscar");//devuelve 0
+            int test6 = db.GetStudentIndex(null);
         }
         //static: nombre... si no objeto.static
         /*IMPORTANTE: Sysbolizar una lista donde no hay nada (phi)*/
