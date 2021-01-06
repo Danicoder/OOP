@@ -27,17 +27,17 @@ namespace OOP
             return GetStudentIndex(name) != -1;
         }
         //funcion que devuelve la posicion de un alumno dado un nombre.
-        public int GetStudentIndex(string name) //GetStudentIndex es un método de objeto = toupper
+        public int GetStudentIndex(string name) //GetStudentIndex es un método de objeto en toupper(mayuasculas)
         {
             for(int i=0;i< studentList.Count;i++)
             {
                 Student s = studentList[i];
                 if (s.GetName()!=null && s.GetName().ToUpper() == name)
                 {
-                    for (int j = 0; j < studentList.Count; j++)
+                    for (int j = 0; j < studentList.Count; j++) //Cuando entra a este bucle, devuelve 0 = j
                     {
                         if (s.GetName().ToUpper() == name.ToUpper())
-                            return j;
+                            return j; 
                     }
                 }
             }
