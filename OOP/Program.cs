@@ -15,17 +15,19 @@ namespace OOP
             
             st.SetNia(7);
             st2.SetNia(3);
-            st.SetName2(null); //debería devolver -1, como no lo hace, hacer que devuelva dicho valor
+            st.SetName2("Paco"); //debería devolver -1, como no lo hace, hacer que devuelva dicho valor
             st2.SetName2("Elena");
 
                         db.Add(st);
                         db.Add(st2);
-            bool test = db.ContainsStudent("Paco");
+                        db.RemoveStudent("Paco");
+                        db.RemoveStudent(3);
+            /*bool test = db.ContainsStudent("Paco");
             int test2 = db.GetStudentIndex("Lucia");//devuelve -1
             int test3 = db.GetStudentIndex("Juan");//devuelve -1
             int test4 = db.GetStudentIndex("LUCIA");//devuelve -1
             int test5 = db.GetStudentIndex("Oscar");//devuelve -1
-            int test6 = db.GetStudentIndex("Elena"); //devuelve -1
+            int test6 = db.GetStudentIndex("Elena"); //devuelve -1*/
         }
     }
     /*
